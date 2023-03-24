@@ -18,8 +18,13 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password', validators=[InputRequired()])
     submit = SubmitField('Log In')
 
+
 class PostForm(FlaskForm):
     title = StringField('Title', validators=[InputRequired()])
     body = TextAreaField('Body', validators=[InputRequired()])
     image_url = StringField('Image URL')
     submit = SubmitField('Create Post')
+
+class SearchForm(FlaskForm):
+    search_term = StringField('Search Term')
+    submit = SubmitField('Search')
